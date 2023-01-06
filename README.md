@@ -184,11 +184,17 @@ This tutorial outlines the implementation of on-premises Active Directory within
   
 ![AD part 14](https://user-images.githubusercontent.com/58159183/210925401-2cadf7a0-8cd8-4eef-9be4-cec1937089e3.gif)
 
--
--
--
--
--
--
--
+- I picked a random generated user and copy the username of the random user that I picked
+- I then log out of Client-1 and then relogin into Client-1 with its public IP address in remote desktop
+- I login as mydomain.com\qil.cenali with the password in the script which was Password1
+- I then went to CMD to confirm I am qil.cenali user and in teh right VM which is Client-1
+- I then proceeded to windows (C) and Users to see all the user I login as
+
+<p>
+  
+![AD part 15](https://user-images.githubusercontent.com/58159183/210926207-badadc30-8ed7-484a-80a5-9e1ea283ece0.gif)
+  
+- Note: This gif will show if a user got lock out of there account for loggging in with the wrong password
+- I picked a random user to show
+ - I then even show if you block a user from logging in 
 
