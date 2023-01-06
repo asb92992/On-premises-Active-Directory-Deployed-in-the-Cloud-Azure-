@@ -102,16 +102,26 @@ This tutorial outlines the implementation of on-premises Active Directory within
 - I then added a domain admin group in member of
 - I proceeded to type domain and check groups and then click on domain admin
 - That then made jessica doe a administrator 
--
   
 <p>
   
   
 ![AD part 7](https://user-images.githubusercontent.com/58159183/210915004-dca04342-adf8-4508-85bd-0a3d7f6a7cad.gif)
 
--
--
--
+- I then logg off of DC-1
+- Log back in to DC-1 with it's public IP address in remote deskop
+- Login as mydomain.com\jessica_admin with the password I made for Jessica
+- I proceeded to CMD to show which VM that I was in and I was in DC-1 and as jessica_admin as the user
+- I then join Client-1 to the domain so I can login to any domain accounts 
+- Now in Client-1 VM I went to settings - systems- rename this pc
+- Clicked on change and made CLient-1 to a member of domain.com and it did not work because it reached out to the DNS       server to get whats the domain controller and I have not made one yet
+- I then had to set my DNS server for Client-1 in Azure portal
+- In Azuure portal I went to Clinet-1 VM. In Azure portal I will set Client-1 DNS settings to the DC private IP address
+- I went to DC-1 networking to get its NIC private IP adress which was 10.0.0.4
+- Note: I'm setting client 1 virtual network interface card. Im setting the DNS to DC-1 ip address is.
+- Went to Client-1 networking -> DNS servers and then change the DNS server of Client-1 to DC-1 private ip address which     is 10.0.0.4
+- I then restarted client-1 in azure which flushed the DNS cache
+- I login to Client-1 as the user labuser since its not join to the domain yet. 
 
  
 
