@@ -18,35 +18,62 @@ This tutorial outlines the implementation of on-premises Active Directory within
 - Windows Server 2022
 - Windows 10 (21H2)
 
-<h2>High-Level Deployment and Configuration Steps</h2>
-
-- Step 1
-- Step 2
-- Step 3
-- Step 4
 
 <h2>Deployment and Configuration Steps</h2>
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+![AD part 1](https://user-images.githubusercontent.com/58159183/210908723-6038ebfd-a05a-4e1d-a48e-a040b65e306b.gif)
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+</p>
+<br />
+
+- I created the domain controller VM (windows server 2022) named DC-1
+- Created a Client vm (windows 10) named Client-1 
+- Both VM's have the same resource group and Virtual network
+
+<p>
+
+![AD part 2](https://user-images.githubusercontent.com/58159183/210909239-42eeb700-1958-4660-92e2-321fef7d3c93.gif)
+
+</p>
+<p>
+
+- NIC is network interface
+- Proceeded to DC-1 VM NIC then went to the IP configs to set the IP address to static
+- Since its been set to static the IP adress will not change for DC-1
+- Login to remote desktop with client-1 public IP address and my username and passoword. 
+- My username is labuser
+- Copied DC-1 private IP address
+- Went to CMD in CLient-1 and ping -t DC-1 private ip adress. ping -t 10.0.0.4
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+![AD part 3](https://user-images.githubusercontent.com/58159183/210910713-5ec0560a-1f38-4df7-bf94-08ba1fa31bb0.gif)
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+- Login to DC-1 with it's public IP adress in remote desktop
+- Then went to wf.msc which stands for firewall and network protection in windows security
+- Then went to inbound rules 
+- As you can see the the ping request is still time out in the CMD
+
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
+
+![AD part 4](https://user-images.githubusercontent.com/58159183/210911345-9b60044b-35cb-4a3b-86b2-1e0b6eb5aa7a.gif)
+
+- In inbound rules I enabled two ICMPv4 called Core networking Diagnostics- ICMP Echo Request in the DC-1 Vm
+- Proceeded to check back at the CLient-1 VM to see the ping succeed 
+- I stop the ping from continuing by using ctrl-c
+- Went back to DC-1 VM and in the server manager I click add roles and features 
+- Proceeded to install active directory domain services
+
