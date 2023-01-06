@@ -76,4 +76,14 @@ This tutorial outlines the implementation of on-premises Active Directory within
 - I stop the ping from continuing by using ctrl-c
 - Went back to DC-1 VM and in the server manager I click add roles and features 
 - Proceeded to install active directory domain services
+  
+<p>
+
+![AD part 5](https://user-images.githubusercontent.com/58159183/210912864-a5685983-48e8-411e-adee-0415a7a439ce.gif)
+  
+- Click on promote this server to domain controller in server manger to finsih installing active directory
+- Added a new forest and name my root domain mydomain.com
+- Active directory is installed
+ 
+
 
