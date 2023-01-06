@@ -154,11 +154,26 @@ This tutorial outlines the implementation of on-premises Active Directory within
   
 ![AD part 11](https://user-images.githubusercontent.com/58159183/210922928-4ee06514-f5ca-4fd5-9d22-d7f51394c921.gif)
 
--
--
--
--
--
--
+- I copy Client-1 public IP address and log back into remote desktop
+- Log back in as mydomain.com\jessica_admin and the password to the account
+- Note: Set it up so all domain users has access to remote desktop in Client-1 so anybody can log into any computer
+- start menu -> system -> Select users that can remotely access this PC -> add -> and type domain users and check names     then click ok. 
+- Now all domain users are allow to login into the computer
+  
+<p>
+  
+![AD part 12](https://user-images.githubusercontent.com/58159183/210923608-7d976d5a-00a9-4407-8f60-5f2eb2c9a4a4.gif)
 
+- Go to start then windows administrative tools -> active directory users and computers
+- click on mydomain.com -> users -> domain users -> members note: to see all users so anyone in the group can login to       client 1
+
+<p>
+  
+![AD part 13](https://user-images.githubusercontent.com/58159183/210924331-766f4e3f-ea0c-404d-8b0b-d61225bf2de5.gif)
+
+-
+-
+-
+-
+-
 
