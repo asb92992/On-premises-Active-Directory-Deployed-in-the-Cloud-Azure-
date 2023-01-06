@@ -127,5 +127,27 @@ This tutorial outlines the implementation of on-premises Active Directory within
   
 ![AD part 8](https://user-images.githubusercontent.com/58159183/210920455-8d052d80-aeeb-42db-a125-7fd411c4e95d.gif)
 
+- Note: DNS settings for the virtual NIC for Client 1 is set and now I will join Client-1 to the domain
+- I then went to CMD to observe the new DNS settings in Client-1
+  
+<p>
+  
+![AD part 9](https://user-images.githubusercontent.com/58159183/210921211-d98f98e1-fa71-4529-a739-9527ae79fba2.gif)
+
+- Note: Join Client-1 to the domain now
+- I then went to settings 
+
+<p>
+  
+![AD part 10](https://user-images.githubusercontent.com/58159183/210921968-9d4f42cb-b515-4e79-a870-0a7db5e54ae3.gif)
+ 
+- In settings I went to rename this PC -> change -> domain
+- Then change the domain to mydomain.com
+- Then a window pops up called computer name/ domain changes
+- I then login with mydomain.com\ jessica_admin with the password I have for jessica
+- A pop up window called computer name/ domain changes proves it was a sucess
+- Client-1 then restarts
+- Client-1 is now join to the domain
+- Now we can login to our domain admin account with Client-1 VM. So even though jessica admin is not a user to client-1 we   can still login because it is join to DC-1 domain
 
 
