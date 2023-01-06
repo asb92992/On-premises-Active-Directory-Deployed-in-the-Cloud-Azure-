@@ -149,5 +149,16 @@ This tutorial outlines the implementation of on-premises Active Directory within
 - Client-1 then restarts
 - Client-1 is now join to the domain
 - Now we can login to our domain admin account with Client-1 VM. So even though jessica admin is not a user to client-1 we   can still login because it is join to DC-1 domain
+  
+<p>
+  
+![AD part 11](https://user-images.githubusercontent.com/58159183/210922928-4ee06514-f5ca-4fd5-9d22-d7f51394c921.gif)
+
+-
+-
+-
+-
+-
+-
 
 
