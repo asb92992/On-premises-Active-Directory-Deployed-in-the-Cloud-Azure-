@@ -123,6 +123,9 @@ This tutorial outlines the implementation of on-premises Active Directory within
 - I then restarted client-1 in azure which flushed the DNS cache
 - I login to Client-1 as the user labuser since its not join to the domain yet. 
 
- 
+<p>
+  
+![AD part 8](https://user-images.githubusercontent.com/58159183/210920455-8d052d80-aeeb-42db-a125-7fd411c4e95d.gif)
+
 
 
