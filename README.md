@@ -101,7 +101,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 - To do that I right click on jessica and went to properties and then member of
 - I then added a domain admin group in member of
 - I proceeded to type domain and check groups and then click on domain admin
-- That then made jessica doe a administrator 
+- Made jessica doe a administrator 
   
 <p>
   
@@ -178,7 +178,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 - Note: The scipt will take 10,000 number of accounts and give them all the password which is Password1. The account is     going to be created in _EMPLOYEES section
 - Then proceed to active directory users and computers 
 - Go to the _Employees section and refresh the section
-- You can now see all the generated names being made from teh script before
+- You can now see all the generated names being made from the script before
 
 <p>
   
@@ -196,5 +196,5 @@ This tutorial outlines the implementation of on-premises Active Directory within
   
 - Note: This gif will show if a user got lock out of there account for loggging in with the wrong password
 - I picked a random user to show
- - I then even show if you block a user from logging in 
+- I then even show you can block a user from logging in
 
