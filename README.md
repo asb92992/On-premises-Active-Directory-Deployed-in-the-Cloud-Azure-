@@ -171,6 +171,21 @@ This tutorial outlines the implementation of on-premises Active Directory within
   
 ![AD part 13](https://user-images.githubusercontent.com/58159183/210924331-766f4e3f-ea0c-404d-8b0b-d61225bf2de5.gif)
 
+- Note: Make a bunch of users and attemp to login in one of them
+- In DC-1 VM open Windows PowerShell ISE as an adminstrator
+- Create a new file then paste the scripts of this into it -> (https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1)
+- Run the script and observe the accounts being cretated 
+- Note: The scipt will take 10,000 number of accounts and give them all the password which is Password1. The account is     going to be created in _EMPLOYEES section
+- Then proceed to active directory users and computers 
+- Go to the _Employees section and refresh the section
+- You can now see all the generated names being made from teh script before
+
+<p>
+  
+![AD part 14](https://user-images.githubusercontent.com/58159183/210925401-2cadf7a0-8cd8-4eef-9be4-cec1937089e3.gif)
+
+-
+-
 -
 -
 -
