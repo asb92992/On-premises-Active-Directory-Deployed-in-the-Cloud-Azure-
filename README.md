@@ -84,6 +84,35 @@ This tutorial outlines the implementation of on-premises Active Directory within
 - Click on promote this server to domain controller in server manger to finsih installing active directory
 - Added a new forest and name my root domain mydomain.com
 - Active directory is installed
+  
+<p>
+ 
+![AD part 6](https://user-images.githubusercontent.com/58159183/210913704-b62396b7-0311-416a-9b60-e6930dc2ec8e.gif)
+
+- DC- 1 needed to restart since I install the active drectory domain services
+- Login back into DC-1 with the public IP address
+- I had to login with the context of the domain since DC-1 became a domain controller now 
+- Instead of logging in with labuser I now login with mydomain.com\labuser
+- Proceeded to Active Directory Users and Computers  and created an Organizational Unit called _EMPLOYEES AND _ADMINS
+- In the _ADMINS section I proceeded to create a new USER named jessica doe with a username jessica_admin and a               password for the made up name
+- I also Unchecked user must change password at next login since it is just practice and then I click password never         expires
+- I now have a User in the _ADMINS section, but jessica_admin is not a admin yet
+- To make jessica_admin an actual admin account I have to assign it to the domain admin group
+- To do that I right click on jessica and went to properties and then member of
+- I then added a domain admin group in member of
+- I proceeded to type domain and check groups and then click on domain admin
+- That then made jessica doe a administrator 
+-
+  
+<p>
+  
+  
+![AD part 7](https://user-images.githubusercontent.com/58159183/210915004-dca04342-adf8-4508-85bd-0a3d7f6a7cad.gif)
+
+-
+-
+-
+
  
 
 
